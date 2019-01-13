@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wbp.apps.WbpConfig',
-
+    'my_wbp.apps.main.apps.MainConfig',
 ]
 
 MIDDLEWARE = [

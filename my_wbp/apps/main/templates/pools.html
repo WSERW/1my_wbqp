@@ -31,15 +31,30 @@
 {% include "navbar.html" %}
 <div class="background">
     <div class="container">
-         <div class="starter-template">
-        <p class="lead">Используйте этот документ для быстрого запуска любого нового проекта.<br> Все, что вы получаете этот текст, в основном баребоны HTML-документа.</p>
-            <div>
-                <button class="btn btn-link btn-block">first ask</button>
-                <button class="btn btn-link btn-block">second ask</button>
-                <button class="btn btn-link btn-block">third ask</button>
+
+        <div class="row">>
+            <div class="col-lg-3 col-md-4 col-sm-3 col-xs-2">
             </div>
+            <div class="col-lg-6 col-md-4 col-sm-6 col-xs-8">
+                {% for quest in Quests %}
+                <div class="question_form">
+                    <p class="lead">{{ quest.ask }}</p>
+                        <div>
+
+                            <button class="btn btn-link btn-block">{{ quest.answer1 }}</button>
+                            <button class="btn btn-link btn-block">{{ quest.answer2 }}</button>
+                            <button class="btn btn-link btn-block">{{ quest.answer3 }}</button>
+
+                        </div>
+                </div>
+                {% endfor %}
+                <div class="col-lg-3 col-md-4 col-sm-3 col-xs-2">
+                </div>
          </div>
+
+        </div>
     </div>
+
 </div>
 
 
@@ -52,6 +67,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/static/wbp_app/js/bootstrap.js"></script>
+    <script src="/static/wbp_app/js/pools.js"></script>
     <script src="/static/wbp_app/js/bootstrap.min.js"></script>
     <script src="/static/wbp_app/js/npm.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
