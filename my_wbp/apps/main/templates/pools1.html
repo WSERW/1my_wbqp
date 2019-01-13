@@ -1,4 +1,4 @@
-{% load staticfiles %}
+pools.html{% load staticfiles %}
 <!DOCTYPE html>
 <!-- saved from url=(0048)http://bootstrap-3.ru/examples/starter-template/ -->
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -36,7 +36,7 @@
             <div class="col-lg-3 col-md-4 col-sm-3 col-xs-2">
             </div>
             <div class="col-lg-6 col-md-4 col-sm-6 col-xs-8">
-
+                {% for quest in Quests %}
                 <div class="question_form">
                     <p class="lead">{{ quest.ask }}</p>
                         <div>
@@ -47,7 +47,7 @@
 
                         </div>
                 </div>
-
+                {% endfor %}
                 <div class="col-lg-3 col-md-4 col-sm-3 col-xs-2">
                 </div>
          </div>
